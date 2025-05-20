@@ -1,7 +1,7 @@
 A validação de formulários no lado do cliente utilizando JavaScript é uma técnica essencial para garantir que os dados inseridos por um usuário
 estejam corretos antes de serem enviados ao servidor. Isso melhora a experiência do usuário e reduz o número de requisições com dados inválidos.
 
-1. Captura de Dados com JavaScript
+📌1. Captura de Dados com JavaScript
 Quando um usuário preenche um formulário HTML, o JavaScript pode acessar os dados inseridos utilizando o DOM (Document Object Model).
  Isso é feito selecionando os elementos do formulário e lendo seus valores:
 
@@ -25,7 +25,7 @@ formulario.addEventListener('submit', function(evento) {
 
   // validações aqui
 });
-2. Verificações com JavaScript
+📌2. Verificações com JavaScript
 Após capturar os dados, você pode fazer verificações como:
 
 Campos obrigatórios não estarem vazios
@@ -45,7 +45,7 @@ if (nome.trim() === '') {
   alert("O campo nome é obrigatório.");
   return;
 }
-3. Expressões Regulares (Regex)
+📌3. Expressões Regulares (Regex)
 Uma expressão regular é um padrão utilizado para encontrar correspondências em strings.
 É muito útil para validações mais complexas, como formatos específicos (e-mail, CEP, CPF etc.).
 
@@ -71,7 +71,7 @@ Explicação da expressão regular: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
 [^\s@]+ — o TLD (ex: "com", "org")
 
-4. Conclusão
+📌4. Conclusão
 A validação no lado do cliente com JavaScript:
 
 Melhora a usabilidade
@@ -84,7 +84,7 @@ Pode ser simples (campos vazios) ou avançada (com regex)
 
 No entanto, não substitui a validação no servidor, pois o cliente pode desabilitar o JavaScript. A validação do lado do cliente serve como primeira linha de defesa e comodidade.
 
-Aqui estão as fontes e referências utilizadas para construir o exemplo do projeto de validação de formulário com JavaScript:
+📌Aqui estão as fontes e referências utilizadas para construir o exemplo do projeto de validação de formulário com JavaScript:
 
 📘 Conceitos Técnicos
 Validação com JavaScript
