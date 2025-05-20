@@ -1,0 +1,85 @@
+A validação de formulários no lado do cliente utilizando JavaScript é uma técnica essencial para garantir que os dados inseridos por um usuário
+estejam corretos antes de serem enviados ao servidor. Isso melhora a experiência do usuário e reduz o número de requisições com dados inválidos.
+
+1. Captura de Dados com JavaScript
+Quando um usuário preenche um formulário HTML, o JavaScript pode acessar os dados inseridos utilizando o DOM (Document Object Model).
+ Isso é feito selecionando os elementos do formulário e lendo seus valores:
+
+html
+Copiar
+Editar
+<form id="meuFormulario">
+  <input type="text" id="nome" />
+  <input type="email" id="email" />
+  <button type="submit">Enviar</button>
+</form>
+javascript
+Copiar
+Editar
+const formulario = document.getElementById('meuFormulario');
+
+formulario.addEventListener('submit', function(evento) {
+  evento.preventDefault(); // impede o envio automático
+  const nome = document.getElementById('nome').value;
+  const email = document.getElementById('email').value;
+
+  // validações aqui
+});
+2. Verificações com JavaScript
+Após capturar os dados, você pode fazer verificações como:
+
+Campos obrigatórios não estarem vazios
+
+Comprimento mínimo/máximo
+
+Valores numéricos válidos
+
+Formato de e-mail, telefone, CPF, etc.
+
+Exemplo simples de verificação:
+
+javascript
+Copiar
+Editar
+if (nome.trim() === '') {
+  alert("O campo nome é obrigatório.");
+  return;
+}
+3. Expressões Regulares (Regex)
+Uma expressão regular é um padrão utilizado para encontrar correspondências em strings.
+É muito útil para validações mais complexas, como formatos específicos (e-mail, CEP, CPF etc.).
+
+Validação de e-mail com expressão regular
+javascript
+Copiar
+Editar
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailRegex.test(email)) {
+  alert("E-mail inválido.");
+  return;
+}
+Explicação da expressão regular: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+^ e $ — indicam o início e o fim da string.
+
+[^\s@]+ — um ou mais caracteres que não sejam espaços em branco ou "@"
+
+@ — símbolo obrigatório de separação no e-mail
+
+[^\s@]+ — domínio (ex: "gmail")
+
+\. — ponto literal (representa o ponto entre domínio e TLD, como ".com")
+
+[^\s@]+ — o TLD (ex: "com", "org")
+
+4. Conclusão
+A validação no lado do cliente com JavaScript:
+
+Melhora a usabilidade
+
+Reduz tráfego desnecessário
+
+Permite feedback imediato
+
+Pode ser simples (campos vazios) ou avançada (com regex)
+
+No entanto, não substitui a validação no servidor, pois o cliente pode desabilitar o JavaScript. A validação do lado do cliente serve como primeira linha de defesa e comodidade.
