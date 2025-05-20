@@ -83,3 +83,39 @@ Permite feedback imediato
 Pode ser simples (campos vazios) ou avançada (com regex)
 
 No entanto, não substitui a validação no servidor, pois o cliente pode desabilitar o JavaScript. A validação do lado do cliente serve como primeira linha de defesa e comodidade.
+
+Aqui estão as fontes e referências utilizadas para construir o exemplo do projeto de validação de formulário com JavaScript:
+
+📘 Conceitos Técnicos
+Validação com JavaScript
+
+Conhecimento básico e boas práticas de uso do DOM, eventos e manipulação de valores com addEventListener, .value, .trim(), etc.
+
+Documentação:
+
+MDN Web Docs – Form validation
+
+MDN Web Docs – DOM manipulation
+
+Expressões Regulares para E-mail
+
+A regex usada é uma forma prática e simplificada, inspirada em padrões comuns:
+
+/^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+Explicação detalhada do padrão:
+MDN – Regular Expressions
+
+CSS e Estilização
+
+Uso moderno de CSS com propriedades como box-shadow, border-radius, hover, transition, etc.
+
+Design inspirado em UI patterns leves e limpos, como os adotados por ferramentas como TailwindCSS (sem usar o framework diretamente).
+
+Tipografia com Google Fonts:
+
+Inter – Google Fonts
+
+Boas práticas de HTML
+
+Estrutura semântica de formulário com label, input, e required.
